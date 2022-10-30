@@ -1,0 +1,135 @@
+.active{
+  background-color:#003479;
+  color: white;
+  pointer-events: none;
+
+}
+
+.thead{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.tBody{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color:white;
+  margin-bottom:2vh;
+  margin-top:1vh;
+  height:8vh;
+  margin-left:1vw;
+  max-width:95%;
+  border-bottom:2px solid #0dcaf0;
+
+  .userId{
+    margin-left:1vw;
+  }
+  .iconComp{
+    margin-right: 1vw;
+  }
+
+}
+
+table{
+  width: 100%;
+}
+
+#contenitore{
+  margin-top:6vh;
+  margin-bottom:25vh;
+
+  display: flex;
+  flex-direction: row;
+  height:50vh;
+  justify-content: space-evenly;
+
+  #ricerca{
+    width: 40vh;
+    height: 55vh;
+    background-color:#F4F4F4;
+
+
+    #divFiltri{
+
+      padding-left:2vw;
+
+      .search{
+        display: flex;
+        flex-direction: row;
+
+        input{
+          height:5vh;
+          width: 70%;
+        }
+        .buttonRicerca{
+          height:5vh;
+          background-color:#644C79;
+          border:none ;
+          border-radius: 2px;
+          i{
+            color: white;
+            height:100%;
+          }
+        }
+      }
+
+      .completed{
+
+        display: flex;
+        flex-direction: column;
+
+        .buttonComp{
+          width: 10vw;
+          height: 6vh;
+        }
+      }
+      .selectUser{
+
+        display: flex;
+        flex-direction: column;
+
+        .tendina{
+          width: 80%;
+        }
+      }
+
+      .resetta{
+        cursor: pointer;
+
+      }
+    }
+
+
+  }
+  #paginazione{
+    width: 90vh;
+    height: 65vh;
+    background-color:#F4F4F4;
+
+
+    .intTab{
+      border-bottom: 1px solid grey;
+      // margin: 0;
+      // padding:0;
+    }
+
+
+  }
+
+  .divBottoni{
+
+     button{
+      margin: 0 1vw;
+      border: none;
+      border-radius:100%;
+     }
+  }
+
+}
+
+.colorText{
+  color:#003479;
+}

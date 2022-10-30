@@ -1,0 +1,78 @@
+
+    <div id="contenitore">
+      <div id="ricerca">
+        <h3 class="text-center colorText py-3">FILTERS</h3>
+
+        <div id="divFiltri">
+          <div class="search">
+
+            <button class="buttonRicerca" (click)="filterByString()" >
+              <i class="bi bi-search fs-5"></i>
+            </button>
+
+            <input type="text" placeholder="Search..." [(ngModel)]="ricerca"/>
+          </div>
+
+          <div class="completed py-4">
+            <h6 class="colorText">COMPLETED</h6>
+            <button class="btn btn-primary buttonComp" (click)="showCompleted()">NO</button>
+          </div>
+
+          <div class="selectUser mb-4">
+            <h6 class="colorText">SELECT USER ID</h6>
+            <select class="tendina" #ids (change)="onSelectedId(ids.value)">
+            <option default></option>
+            <option >1</option>
+            <option >2</option>
+            <option >3</option>
+            <option >4</option>
+            <option >5</option>
+            <option >6</option>
+            <option >7</option>
+            <option >8</option>
+            <option >9</option>
+            <option >10</option>
+            </select>
+          </div>
+          <a class="resetta colorText" (click)="resetFilters()">Reset filters</a>
+        </div>
+
+      </div>
+
+      <div id="paginazione">
+        <table>
+          <thead class="intTab">
+            <tr class="thead">
+              <th class="colorText">USER ID</th>
+              <th class="colorText">TITLE</th>
+              <th class="colorText">COMPLETED</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="tBody" *ngFor="let todo of paginaCorrente()">
+              <td class="userId">{{ todo.userId }}</td>
+              <td >{{ todo.title }}</td>
+              <td class="iconComp" *ngIf="todo.completed == true"><i class="bi bi-check-lg text-info fs-5"></i></td>
+              <td class="iconComp" *ngIf="todo.completed == false"><i class="bi bi-x text-info fs-4"></i></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="text-center divBottoni">
+
+
+        <button class="prev"><i class="bi bi-arrow-left-short"></i></button>
+        <ng-container *ngFor="let i of nPagine(); let j = index">
+        <button
+
+          (click)="this.pagCorrente = j"
+          [disabled]="this.pagCorrente == j"
+          [ngClass]="{ active: this.pagCorrente == j }"
+          *ngIf="j < this.pagCorrente + 2 && j > this.pagCorrente -2"
+        >
+          {{ j + 1 }}
+        </button>
+      </ng-container>
+      <button class="next"><i class="bi bi-arrow-right-short"></i></button>
+      </div>
+      </div>
+    </div>
