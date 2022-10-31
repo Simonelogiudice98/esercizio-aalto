@@ -1,3 +1,8 @@
+
+// body{
+
+// }
+
 .active{
   background-color:#003479;
   color: white;
@@ -6,12 +11,13 @@
 }
 
 .thead{
+  font-family:"Karbon";
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 .tBody{
-
+  font-family:"Karbon";
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -82,7 +88,7 @@ table{
         flex-direction: column;
 
         .buttonComp{
-          width: 10vw;
+          width: 14vw;
           height: 6vh;
         }
       }
@@ -110,6 +116,7 @@ table{
     background-color:#F4F4F4;
 
 
+
     .intTab{
       border-bottom: 1px solid grey;
       // margin: 0;
@@ -132,4 +139,46 @@ table{
 
 .colorText{
   color:#003479;
+  font-family:"Karbon";
 }
+
+
+// MEDIA QUERIES
+
+@media screen  and (min-width: 320px) and (max-width:767px) {
+
+
+  #contenitore{
+    flex-direction: column;
+    margin-top: 10vh;
+    padding-bottom: 10vh;
+
+    #ricerca{
+      margin: 0 auto;
+      margin-bottom:5vh;
+
+
+    }
+
+    #paginazione{
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom:16vh;
+    }
+
+  }
+
+}
+
+@media screen and(min-width: 768px) and (max-width:850px){
+
+  #contenitore{
+
+    #paginazione{
+      width:62vw;
+
+    }
+  }
+
+}
+

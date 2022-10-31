@@ -9,11 +9,23 @@ nav{
   img{
 
     position: absolute;
-    top: 18px;
-    left: 353px;
-    width: 140px;
-    height: 57px;
+    top: 3vh;
+    left: 15vw;
+    margin:0 auto;
+    width: 16vw;
+    height: 7vh;
   }
 
 
 }
+
+// MEDIA QUERIES AND
+
+@media screen  and (min-width: 320px) and (max-width:767px){
+
+  nav{
+    margin-bottom: 50vh;;
+  }
+}
+
+
